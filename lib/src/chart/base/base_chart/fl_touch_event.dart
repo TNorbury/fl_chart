@@ -247,3 +247,26 @@ class FlPointerExitEvent extends FlTouchEvent {
   @override
   Offset get localPosition => event.localPosition;
 }
+
+class FlScaleStartEvent extends FlTouchEvent {
+  const FlScaleStartEvent({
+    required this.details,
+  });
+  final ScaleStartDetails details;
+}
+
+class FlScaleUpdateEvent extends FlTouchEvent {
+  const FlScaleUpdateEvent({
+    required this.details,
+  });
+
+  /// info about the scale update
+  final ScaleUpdateDetails details;
+}
+
+class FlScaleEndEvent extends FlTouchEvent {
+  const FlScaleEndEvent({
+    required this.details,
+  });
+  final ScaleEndDetails details;
+}
